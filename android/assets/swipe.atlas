@@ -1,0 +1,152 @@
+
+swipe.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+swipe
+  rotate: false
+  xy: 1, 21
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 0
+swipe
+  rotate: false
+  xy: 1, 11
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 1
+swipe
+  rotate: false
+  xy: 56, 21
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 10
+swipe
+  rotate: false
+  xy: 1, 1
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 11
+swipe
+  rotate: false
+  xy: 56, 11
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 12
+swipe
+  rotate: false
+  xy: 111, 21
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 13
+swipe
+  rotate: false
+  xy: 56, 1
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 14
+swipe
+  rotate: false
+  xy: 111, 11
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 15
+swipe
+  rotate: false
+  xy: 166, 21
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 16
+swipe
+  rotate: false
+  xy: 111, 1
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 17
+swipe
+  rotate: false
+  xy: 166, 11
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 18
+swipe
+  rotate: false
+  xy: 221, 21
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 19
+swipe
+  rotate: false
+  xy: 166, 1
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 2
+swipe
+  rotate: false
+  xy: 221, 11
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 20
+swipe
+  rotate: false
+  xy: 276, 21
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 3
+swipe
+  rotate: false
+  xy: 221, 1
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 4
+swipe
+  rotate: false
+  xy: 276, 11
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 5
+swipe
+  rotate: false
+  xy: 331, 21
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 6
+swipe
+  rotate: false
+  xy: 276, 1
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 7
+swipe
+  rotate: false
+  xy: 331, 11
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 8
+swipe
+  rotate: false
+  xy: 386, 21
+  size: 53, 8
+  orig: 53, 8
+  offset: 0, 0
+  index: 9

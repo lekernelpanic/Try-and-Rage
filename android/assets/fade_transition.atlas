@@ -1,0 +1,152 @@
+
+fade_transition.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+fade_transition
+  rotate: false
+  xy: 1, 13
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 0
+fade_transition
+  rotate: false
+  xy: 1, 10
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 1
+fade_transition
+  rotate: false
+  xy: 4, 13
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 10
+fade_transition
+  rotate: false
+  xy: 1, 7
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 11
+fade_transition
+  rotate: false
+  xy: 4, 10
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 12
+fade_transition
+  rotate: false
+  xy: 7, 13
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 13
+fade_transition
+  rotate: false
+  xy: 1, 4
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 14
+fade_transition
+  rotate: false
+  xy: 4, 7
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 15
+fade_transition
+  rotate: false
+  xy: 7, 10
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 16
+fade_transition
+  rotate: false
+  xy: 10, 13
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 17
+fade_transition
+  rotate: false
+  xy: 1, 1
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 18
+fade_transition
+  rotate: false
+  xy: 4, 4
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 19
+fade_transition
+  rotate: false
+  xy: 7, 7
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 2
+fade_transition
+  rotate: false
+  xy: 10, 10
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 20
+fade_transition
+  rotate: false
+  xy: 13, 13
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 3
+fade_transition
+  rotate: false
+  xy: 4, 1
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 4
+fade_transition
+  rotate: false
+  xy: 7, 4
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 5
+fade_transition
+  rotate: false
+  xy: 10, 7
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 6
+fade_transition
+  rotate: false
+  xy: 13, 10
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 7
+fade_transition
+  rotate: false
+  xy: 7, 1
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 8
+fade_transition
+  rotate: false
+  xy: 10, 4
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: 9

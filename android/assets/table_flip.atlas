@@ -1,0 +1,96 @@
+
+table_flip.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+0
+  rotate: false
+  xy: 1, 128
+  size: 140, 125
+  orig: 140, 125
+  offset: 0, 0
+  index: -1
+161
+  rotate: false
+  xy: 1, 1
+  size: 140, 125
+  orig: 140, 125
+  offset: 0, 0
+  index: -1
+300
+  rotate: false
+  xy: 143, 128
+  size: 140, 125
+  orig: 140, 125
+  offset: 0, 0
+  index: -1
+314
+  rotate: false
+  xy: 143, 1
+  size: 140, 125
+  orig: 140, 125
+  offset: 0, 0
+  index: -1
+42
+  rotate: false
+  xy: 285, 128
+  size: 140, 125
+  orig: 140, 125
+  offset: 0, 0
+  index: -1
+69
+  rotate: false
+  xy: 285, 1
+  size: 140, 125
+  orig: 140, 125
+  offset: 0, 0
+  index: -1
+score-0
+  rotate: false
+  xy: 427, 128
+  size: 140, 125
+  orig: 140, 125
+  offset: 0, 0
+  index: -1
+score-1
+  rotate: false
+  xy: 427, 1
+  size: 140, 125
+  orig: 140, 125
+  offset: 0, 0
+  index: -1
+score-2
+  rotate: false
+  xy: 569, 128
+  size: 140, 125
+  orig: 140, 125
+  offset: 0, 0
+  index: -1
+score-3
+  rotate: false
+  xy: 569, 1
+  size: 140, 125
+  orig: 140, 125
+  offset: 0, 0
+  index: -1
+score-4
+  rotate: false
+  xy: 711, 128
+  size: 140, 125
+  orig: 140, 125
+  offset: 0, 0
+  index: -1
+score-5
+  rotate: false
+  xy: 711, 1
+  size: 140, 125
+  orig: 140, 125
+  offset: 0, 0
+  index: -1
+score-6
+  rotate: false
+  xy: 853, 128
+  size: 140, 125
+  orig: 140, 125
+  offset: 0, 0
+  index: -1
