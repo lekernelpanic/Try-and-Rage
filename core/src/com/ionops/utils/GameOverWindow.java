@@ -20,7 +20,7 @@ public class GameOverWindow {
     Button playButton, menuButton;
     TableFlip tableFlip;
     int score, displayedScore;
-    float time, rectangleYorigin, rectangleYFinal, scoreX, scoreY, bestX, bestY;
+    float time, rectangleOriginY, rectangleFinalY, scoreX, scoreY, bestX, bestY;
     boolean scoreIsDisplayed, renderingStarted;
     float[] buttonPadding;
 
@@ -28,13 +28,13 @@ public class GameOverWindow {
         rectangle = new Rectangle();
         backgroundTexture = new Texture("game_over_window.png");
 
-        rectangle.width = Gdx.graphics.getWidth() - Gdx.graphics.getWidth() / 8;
-        rectangle.height = Gdx.graphics.getHeight() / 3;
-        rectangleYorigin = -rectangle.height;
-        rectangle.x = (Gdx.graphics.getWidth() / 2) - (rectangle.width / 2);
-        rectangle.y = rectangleYorigin;
+        rectangle.width = Gdx.graphics.getWidth() - Gdx.graphics.getWidth() / 8f;
+        rectangle.height = Gdx.graphics.getHeight() / 3f;
+        rectangleOriginY = -rectangle.height;
+        rectangle.x = (Gdx.graphics.getWidth() / 2f) - (rectangle.width / 2);
+        rectangle.y = rectangleOriginY;
 
-        rectangleYFinal = (Gdx.graphics.getHeight() / 2) - (rectangle.height / 2);
+        rectangleFinalY = (Gdx.graphics.getHeight() / 2f) - (rectangle.height / 2);
 
         scoreFont = new BitmapFont(Gdx.files.internal("score_font.fnt"), false);
         scoreFont.getData().setScale(7f * Gdx.graphics.getWidth() / 1024);
@@ -57,7 +57,7 @@ public class GameOverWindow {
 
         renderingStarted = true;
 
-        // Incrementaion du score
+        // Score incrementation
         time += Gdx.graphics.getDeltaTime();
         if (time >= SCORE_INCREMENT_SPEED / score) {
             if (displayedScore < score) {
@@ -82,17 +82,17 @@ public class GameOverWindow {
         //
 
         // Animation
-        if (rectangle.y < rectangleYFinal) {
+        if (rectangle.y < rectangleFinalY) {
             float dist = ANIMATION_SPEED * Gdx.graphics.getDeltaTime();
 
-            if (rectangleYFinal - rectangle.y >= dist) {
+            if (rectangleFinalY - rectangle.y >= dist) {
                 rectangle.y += dist;
             } else {
-                rectangle.y = rectangleYFinal;
+                rectangle.y = rectangleFinalY;
             }
 
         } else {
-            rectangle.y = rectangleYFinal;
+            rectangle.y = rectangleFinalY;
         }
         //
 
@@ -142,9 +142,5 @@ public class GameOverWindow {
 
     public boolean scoreIsDisplayed() {
         return scoreIsDisplayed;
-    }
-
-    public boolean getRenderingStarted() {
-        return renderingStarted;
     }
 }

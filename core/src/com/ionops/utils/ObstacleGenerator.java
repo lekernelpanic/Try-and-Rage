@@ -63,7 +63,7 @@ public class ObstacleGenerator {
 
                     // Gestion des colisions
                     if (bar != null && bar.isInCollision(obstacle.getRectangle())) {
-                        TryAndRage.SCREEN_INGAME.gameOver();
+                        TryAndRage.SCREEN_IN_GAME.gameOver();
                         obstacle.explosion();
                     }
                     //

@@ -4,12 +4,13 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 public class Swipe extends Gui {
 
     final float ANIMATION_FRAME_DURATION = 0.008f;
     TextureAtlas atlas;
-    Animation animation;
+    Animation<TextureRegion> animation;
     float animationTime;
     boolean stop;
 
@@ -17,11 +18,11 @@ public class Swipe extends Gui {
         super();
 
         atlas = new TextureAtlas(Gdx.files.internal("swipe.atlas"));
-        animation = new Animation(ANIMATION_FRAME_DURATION, atlas.findRegions("swipe"));
+        animation = new Animation<TextureRegion>(ANIMATION_FRAME_DURATION, atlas.findRegions("swipe"));
 
         rectangle.width = Gdx.graphics.getWidth() * 0.7f;
         rectangle.height = bar.getRectangle().y * 0.35f;
-        rectangle.x = (Gdx.graphics.getWidth() / 2) - (rectangle.width / 2);
+        rectangle.x = (Gdx.graphics.getWidth() / 2f) - (rectangle.width / 2);
         rectangle.y = (bar.getRectangle().y / 2) - (rectangle.height / 2);
     }
 

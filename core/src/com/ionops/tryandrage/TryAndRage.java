@@ -7,7 +7,7 @@ import com.ionops.screen.ScreenMenu;
 public class TryAndRage extends Game {
 
     public static final ScreenMenu SCREEN_MENU = new ScreenMenu();
-    public static final ScreenInGame SCREEN_INGAME = new ScreenInGame();
+    public static final ScreenInGame SCREEN_IN_GAME = new ScreenInGame();
     private static TryAndRage instance;
 
     public TryAndRage() {

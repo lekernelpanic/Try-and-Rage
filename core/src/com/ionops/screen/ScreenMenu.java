@@ -1,6 +1,7 @@
 package com.ionops.screen;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
@@ -34,7 +35,7 @@ public class ScreenMenu implements Screen {
     public void create() {
         keyListener = new KeyListenerMenu(this);
         Gdx.input.setInputProcessor(keyListener);
-        Gdx.input.setCatchBackKey(false);
+        Gdx.input.setCatchKey(Input.Keys.BACK, false);
 
         batch = new SpriteBatch();
         background = new Texture("background.png");
@@ -50,15 +51,15 @@ public class ScreenMenu implements Screen {
         gameTitle = new Image(new Texture("try_and_rage.png"));
         gameTitle.setWidth(Gdx.graphics.getWidth() / 1.5f);
         gameTitle.setHeight(Gdx.graphics.getHeight() / 20f);
-        gameTitle.setX(Gdx.graphics.getWidth() / 2 - gameTitle.getWidth() / 2);
+        gameTitle.setX(Gdx.graphics.getWidth() / 2f - gameTitle.getWidth() / 2);
         gameTitle.setY(Gdx.graphics.getHeight() / 1.3f);
         //
 
-        // config bouton
+        // config button
         startButton = new Button("play_button.atlas");
         startButton.getRectangle().width = Gdx.graphics.getWidth() / 2.5f;
         startButton.getRectangle().height = Gdx.graphics.getHeight() / 8f;
-        startButton.getRectangle().x = Gdx.graphics.getWidth() / 2 - startButton.getRectangle().width / 2;
+        startButton.getRectangle().x = Gdx.graphics.getWidth() / 2f - startButton.getRectangle().width / 2;
         startButton.getRectangle().y = Gdx.graphics.getHeight() / 2.8f;
         //
 
@@ -97,8 +98,8 @@ public class ScreenMenu implements Screen {
 
         if (transition.isFinished()) {
             if (animationOut) {
-                TryAndRage.SCREEN_INGAME.create();
-                TryAndRage.getInstance().setScreen(TryAndRage.SCREEN_INGAME);
+                TryAndRage.SCREEN_IN_GAME.create();
+                TryAndRage.getInstance().setScreen(TryAndRage.SCREEN_IN_GAME);
             } else if (animationIn) {
                 transition.resetAnimationTime();
                 animationIn = false;

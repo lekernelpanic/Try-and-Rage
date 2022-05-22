@@ -47,10 +47,8 @@ public class TableFlip extends Gui {
             texture = atlas.findRegion("score-4");
         } else if (score < 200) {
             texture = atlas.findRegion("score-5");
-        } else if (score >= 200) {
-            texture = atlas.findRegion("score-6");
         } else {
-            texture = atlas.findRegion("score-0");
+            texture = atlas.findRegion("score-6");
         }
 
         super.render(batch, texture);

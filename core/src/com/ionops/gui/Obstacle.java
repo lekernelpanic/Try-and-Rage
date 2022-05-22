@@ -3,7 +3,6 @@ package com.ionops.gui;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.Rectangle;
 import com.ionops.utils.ObstacleGenerator;
 
 import java.util.Random;
@@ -22,8 +21,8 @@ public class Obstacle extends Gui {
 
         random = new Random();
 
-        rectangle.width = Gdx.graphics.getWidth() / 25;
-        rectangle.height = rectangle.width;
+        rectangle.width = Gdx.graphics.getWidth() / 25f;
+        rectangle.height = Gdx.graphics.getWidth() / 25f;
         rectangle.x = random.nextInt(Gdx.graphics.getWidth() - (int) rectangle.width);
         rectangle.y = Gdx.graphics.getHeight();
 
@@ -54,10 +53,6 @@ public class Obstacle extends Gui {
 
     public boolean isOut() {
         return rectangle.y + rectangle.height <= 0;
-    }
-
-    public boolean isPassed(Rectangle rectangle) {
-        return this.rectangle.y + this.rectangle.height < rectangle.y;
     }
 
     public void goDown() {

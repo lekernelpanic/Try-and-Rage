@@ -16,9 +16,9 @@ public class Bar extends Gui {
     public Bar() {
         super();
 
-        rectangle.y = Gdx.graphics.getHeight() / 8;
+        rectangle.y = Gdx.graphics.getHeight() / 8f;
         rectangle.width = Gdx.graphics.getWidth();
-        rectangle.height = Gdx.graphics.getHeight() / 42;
+        rectangle.height = Gdx.graphics.getHeight() / 42f;
 
         space = rectangle.width;
         middle = rectangle.width / 2;

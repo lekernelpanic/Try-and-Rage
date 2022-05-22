@@ -1,16 +1,14 @@
 package com.ionops.screen;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.ionops.gui.Bar;
-import com.ionops.gui.FadeTransition;
-import com.ionops.gui.Iss;
-import com.ionops.gui.Stars;
-import com.ionops.gui.Swipe;
+import com.ionops.gui.*;
 import com.ionops.keylistener.KeyListenerInGame;
 import com.ionops.tryandrage.TryAndRage;
 import com.ionops.utils.GameOverWindow;
@@ -18,7 +16,7 @@ import com.ionops.utils.ObstacleGenerator;
 
 public class ScreenInGame implements Screen {
 
-    final float GAME_OVER_LATENCE = 0.8f;
+    final float GAME_OVER_LATENCY = 0.8f;
     KeyListenerInGame keyListener;
     SpriteBatch batch;
     Texture background;
@@ -40,7 +38,7 @@ public class ScreenInGame implements Screen {
     public void create() {
         keyListener = new KeyListenerInGame(this);
         Gdx.input.setInputProcessor(keyListener);
-        Gdx.input.setCatchBackKey(true);
+        Gdx.input.setCatchKey(Input.Keys.BACK, true);
 
         batch = new SpriteBatch();
         background = new Texture("background.png");
@@ -60,7 +58,7 @@ public class ScreenInGame implements Screen {
         returnMenu = false;
 
         counterFont.getData().setScale(10f * Gdx.graphics.getWidth() / 1024);
-        counterY = Gdx.graphics.getHeight() - Gdx.graphics.getHeight() / 8;
+        counterY = Gdx.graphics.getHeight() - Gdx.graphics.getHeight() / 8f;
     }
 
     @Override
@@ -89,7 +87,7 @@ public class ScreenInGame implements Screen {
             if (gameOver) {
                 time += Gdx.graphics.getDeltaTime();
 
-                if (time > GAME_OVER_LATENCE) {
+                if (time > GAME_OVER_LATENCY) {
                     gameOverWindow.render(batch);
                 } else {
                     displayScore(batch);
@@ -102,7 +100,7 @@ public class ScreenInGame implements Screen {
         }
         batch.end();
 
-        // Switch screen quand la transition est terminée
+        // Switch screen
         if (transition.isFinished()) {
             if (returnMenu) {
                 TryAndRage.SCREEN_MENU.create();
@@ -174,7 +172,7 @@ public class ScreenInGame implements Screen {
     }
 
     public boolean getGameOver() {
-        return gameOver;
+        return !gameOver;
     }
 
     public void returnMenu() {
@@ -189,8 +187,7 @@ public class ScreenInGame implements Screen {
 
     private void displayScore(SpriteBatch batch) {
         String counterValue = Integer.toString(obstacleGen.getObstaclePassed());
-        float counterX = (Gdx.graphics.getWidth() / 2) - (counterFont.getSpaceWidth() * counterValue.length()) / 2;
-
+        float counterX = (Gdx.graphics.getWidth() / 2f) - ((new GlyphLayout(counterFont, counterValue)).width * counterValue.length()) / 2;
         counterFont.draw(batch, counterValue, counterX, counterY);
     }
 

@@ -15,14 +15,12 @@ public class KeyListenerInGame implements InputProcessor {
 
     @Override
     public boolean keyDown(int keycode) {
-        switch (keycode) {
-            case Keys.BACK:
+        if (keycode == Keys.BACK) {
+            if (screenInstance.getGameOver() || screenInstance.getGameOverWindow().scoreIsDisplayed()) {
+                screenInstance.returnMenu();
+            }
 
-                if (!screenInstance.getGameOver() || screenInstance.getGameOverWindow().scoreIsDisplayed()) {
-                    screenInstance.returnMenu();
-                }
-
-                return true;
+            return true;
         }
         return false;
     }
@@ -45,7 +43,7 @@ public class KeyListenerInGame implements InputProcessor {
     @Override
     public boolean touchUp(int screenX, int screenY, int pointer, int button) {
 
-        // Si les boutons play et menu sont appuyés
+        // Play & Menu buttons
         if (screenInstance.getGameOverWindow().getPlayButton().isTouched(screenX, screenY)) {
             screenInstance.reCreate();
             return true;
@@ -68,7 +66,7 @@ public class KeyListenerInGame implements InputProcessor {
     }
 
     @Override
-    public boolean scrolled(int amount) {
+    public boolean scrolled(float amountX, float amountY) {
         return false;
     }
 
@@ -76,7 +74,7 @@ public class KeyListenerInGame implements InputProcessor {
         if (Gdx.input.isTouched()) {
             screenInstance.getSwipe().stop();
 
-            if (!screenInstance.getGameOver()) {
+            if (screenInstance.getGameOver()) {
                 screenInstance.getObstacleGen().start();
                 screenInstance.getIss().start();
                 screenInstance.getBar().setMiddle(Gdx.input.getX());
